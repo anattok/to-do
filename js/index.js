@@ -20,7 +20,6 @@ const inputTime = document.querySelector(".new-task__time-input");
 const inputPriority = document.querySelector(".new-task__select-input");
 const inputProgress = document.querySelector(".new-task__procents-input");
 
-
 //нажимаем кнопку сделать новую задачу
 buttonAddTask.addEventListener("click", () => {
   wrapNewTask.classList.add("new-task_active");
@@ -48,11 +47,15 @@ buttonSaveTask.addEventListener("click", (e) => {
   task.date = inputDate.value;
   task.time = inputTime.value;
   task.priority = inputPriority.value;
-  task.progress = inputProgress.value;
+  task.progress = Number(inputProgress.value);
+  task.done = false;
+  task.id = Date.now();
 
   tasks.push(task);
 
   localStorage.setItem("tasks", JSON.stringify(tasks));
+  wrapNewTask.classList.remove("new-task_active");
+  wrapAllTasks.classList.remove("to-do__tasks_disabled");
 
-  console.log(localStorage.getItem("tasks"));
+  renderTask();
 });
