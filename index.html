@@ -5,21 +5,204 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="./images/favicons/site.webmanifest" />
+    <link rel="mask-icon" href="./images/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <title>to-do</title>
   </head>
   <body>
-    <div class="to-do"></div>
-    <div class="container">
-      <div class="to-do__wrapper">
-        <h1 class="to-do__title">To-Do List</h1>
-        <div class="to-do__buttons">
-            <button class="to-do__button-add">Добавить</button>
-            <button class="to-do__button-all">Все</button>
-            <button class="to-do__button-process">В процессе</button>
-            <button class="to-do__button-completed">Завершённые</button>
+    <div class="to-do">
+      <div class="container">
+        <div class="to-do__wrapper">
+          <h1 class="to-do__title">To-Do List</h1>
+          <div class="to-do__tasks">
+            <div class="buttons">
+              <button class="buttons__add">Добавить новую задачу</button>
+              <button class="buttons__all">Все</button>
+              <button class="buttons__process">В процессе</button>
+              <button class="buttons__completed">Завершённые</button>
+            </div>
+            <div class="to-do__main">
+              <div class="main-top">
+                <ul class="main-top__list">
+                  <li class="main-top__item main-top__task">Задача</li>
+                  <li class="main-top__item main-top__derscr">Описание</li>
+                  <li class="main-top__item main-top__category">Категория</li>
+                  <li class="main-top__item main-top__date">Дата</li>
+                  <li class="main-top__item main-top__priority">Приоретет</li>
+                  <li class="main-top__item main-top__procent">Прогресс</li>
+                </ul>
+              </div>
+              <div class="task">
+                <ul class="task__list">
+                  <li class="task__item task__task">
+                    Lorem ipsum dolor sit amet.
+                  </li>
+                  <li class="task__item task__derscr">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Facilis, recusandae.
+                  </li>
+                  <li class="task__item task__category">Lorem, ipsum dolor.</li>
+                  <li class="task__item task__date">Lorem, ipsum dolor.</li>
+                  <li class="task__item task__priority">Lorem, ipsum.</li>
+                  <li class="task__item task__procent">Lorem.</li>
+                </ul>
+                <div class="task__buttons">
+                  <button class="task__edit"></button>
+                  <button class="task__del"></button>
+                </div>
+              </div>
+              <div class="task">
+                <ul class="task__list">
+                  <li class="task__item task__task">
+                    Lorem ipsum dolor sit amet.
+                  </li>
+                  <li class="task__item task__derscr">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Facilis, recusandae.
+                  </li>
+                  <li class="task__item task__category">Lorem, ipsum dolor.</li>
+                  <li class="task__item task__date">Lorem, ipsum dolor.</li>
+                  <li class="task__item task__priority">Lorem, ipsum.</li>
+                  <li class="task__item task__procent">Lorem.</li>
+                </ul>
+                <div class="task__buttons">
+                  <button class="task__edit"></button>
+                  <button class="task__del"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="to-do__new-task new-task">
+            <div class="new-task__title">Добавление новой задачи</div>
+            <div class="new-task__main">
+              <form action="" class="new-task__form">
+                <div class="new-task__form-col-right">
+                  <label
+                    class="new-task__label new-task__name-label"
+                    for="name"
+                  >
+                    <span>Название</span>
+                    <input
+                      class="new-task__input new-task__name-input"
+                      type="text"
+                      name=""
+                      id="name"
+                    />
+                  </label>
+
+                  <label
+                    class="new-task__label new-task__description-label"
+                    for="description"
+                  >
+                    <span>Описание</span>
+
+                    <textarea
+                      class="new-task__input new-task__description-input"
+                      rows="10"
+                      cols="45"
+                      name="text"
+                      id="description"
+                    ></textarea>
+                  </label>
+
+                  <label
+                    class="new-task__label new-task__category-label"
+                    for="category"
+                  >
+                    <span>Категория</span>
+                    <input
+                      class="new-task__input new-task__category-input"
+                      type="text"
+                      name=""
+                      id="category"
+                    />
+                  </label>
+
+                  <label
+                    class="new-task__label new-task__date-label"
+                    for="date"
+                  >
+                    <span>Дата</span>
+                    <input
+                      class="new-task__input new-task__date-input"
+                      type="date"
+                      name=""
+                      id="date"
+                    />
+                  </label>
+
+                  <label
+                    class="new-task__label new-task__time-label"
+                    for="time"
+                  >
+                    <span>Время</span>
+                    <input
+                      class="new-task__input new-task__time-input"
+                      type="time"
+                      name=""
+                      id="time"
+                    />
+                  </label>
+                </div>
+                <div class="new-task__form-col-left">
+                  <div class="new-task__form-wrap">
+                    <label
+                      class="new-task__label new-task__priority-label"
+                      for="priority"
+                    >
+                      <span>Приоретет</span>
+                      <select
+                        class="new-task__select-input new-task__input"
+                        name=""
+                        id=""
+                      >
+                        <option value="Очень высокий">Очень высокий</option>
+                        <option value="Высокий">Высокий</option>
+                        <option value="Средний">Средний</option>
+                        <option value="Слабый">Слабый</option>
+                      </select>
+                    </label>
+
+                    <label
+                      class="new-task__label new-task__procents-label"
+                      for="procents"
+                    >
+                      <span>Прогресс</span>
+                      <input
+                        class="new-task__input new-task__procents-input"
+                        type="range"
+                        name=""
+                        id="procents"
+                      />
+                    </label>
+                  </div>
+                  <div class="new-task__form-buttons">
+                    <button class="new-task__form-btn new-task__form-save">
+                      Сохранить
+                    </button>
+                    <button class="new-task__form-btn new-task__form-cancel">
+                      Отмена
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
     <script src="./js/index.js"></script>
   </body>
 </html>
